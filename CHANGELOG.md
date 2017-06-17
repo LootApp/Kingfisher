@@ -2,6 +2,95 @@
 
 -----
 
+## [3.10.2 - Missing Boys](https://github.com/onevcat/Kingfisher/releases/tag/3.10.2) (2017-06-16)
+
+#### Fix
+* Now the processed images result from a cache original image could be cached correctly. [#711](https://github.com/onevcat/Kingfisher/issues/711)
+* Some internal minor clean up.
+
+---
+
+## [3.10.1 - Order, order!](https://github.com/onevcat/Kingfisher/releases/tag/3.10.1) (2017-06-04)
+
+#### Fix
+* Change an inline function order to make Swift 3.0 compiler happy. [#700](https://github.com/onevcat/Kingfisher/issues/700)
+
+---
+
+## [3.10.0 - Hot Bird](https://github.com/onevcat/Kingfisher/releases/tag/3.10.0) (2017-06-03)
+
+#### Add
+* New cache retriving strategy for a request with certain `ImageProcessor` applied. Now Kingfisher will first try to get the processed images from cache. If not existing, it will be smart enough to check whether the original image exists in cache to avoid downloading it.
+* A `cacheOriginalImage` option to also cache original images while an `ImageProcessor` is applied. It is required if you want the new cache strategy. [#650](https://github.com/onevcat/Kingfisher/issues/650)
+* A `FormatIndicatedCacheSerializer` to serialize the image into a certain format (`png`, `jpg` or `gif`). [#693](https://github.com/onevcat/Kingfisher/issues/693)
+
+#### Fix
+* A timing issue when you try to cancel an on-going download task, and start the same one again immediately. Now the previous one will received an error and the later one could be completed normally. [#532](https://github.com/onevcat/Kingfisher/issues/532)
+* Fix the showing/hiding logic for activity indicator in image view to make them independent from race condition.
+* A possible race condition that accessing downloading fetch load conccurently.
+* Invalidate the download session when the downloader gets released. It might cause problem if you were using your own downloader instance.
+* Some internal stability improvement.
+
+---
+
+## [3.9.1 - Compatibility](https://github.com/onevcat/Kingfisher/releases/tag/3.9.1) (2017-05-13)
+
+#### Fix
+* Fix a problem which prevents building under Xcode 8.2 / Swift 3.0. [#677](https://github.com/onevcat/Kingfisher/issues/677)
+
+---
+
+## [3.9.0 - Follow the Rules](https://github.com/onevcat/Kingfisher/releases/tag/3.9.0) (2017-05-11)
+
+#### Add
+* A default option in `KingfisherManager` to let users set a global default option to all `KingfisherManager` related methods, as well as all UI extension methods. [#674](https://github.com/onevcat/Kingfisher/pull/674)
+
+#### Fix
+* Now the options appended will overwrite the previous one. This makes users be able to set proper options in a per-image-way, even when there is already a default option set in `KingfisherManager`.
+* Deprecate `requestsUsePipeling` in `ImageDownloader` since there was a typo. Now use `requestsUsePipelining` instead. [#673](https://github.com/onevcat/Kingfisher/pull/673)
+* Some internal improvement for private APIs.
+
+---
+
+## [3.8.0 - Prowess](https://github.com/onevcat/Kingfisher/releases/tag/3.8.0) (2017-05-10)
+
+#### Add
+* An API to apply rect round for specified corner in `RoundCornerImageProcessor`. Instead of making all four corners rounded, you can now set only some corners rounding. [#668](https://github.com/onevcat/Kingfisher/issues/668)
+
+---
+
+## [3.7.2 - Never Do Things by Halves](https://github.com/onevcat/Kingfisher/releases/tag/3.7.2) (2017-05-09)
+
+#### Fix
+* A wrong design which causes completion handler for previous downloading not called when setting to another url. [#665](https://github.com/onevcat/Kingfisher/issues/665)
+
+---
+
+## [3.7.1 - GIF is Animated](https://github.com/onevcat/Kingfisher/releases/tag/3.7.1) (2017-05-08)
+
+#### Fix
+* Deprecated `preloadAllGIFData`. Change to a more generic name `preloadAllAnimationData` since it could be used for other format with `ImageProcessor`. [#664](https://github.com/onevcat/Kingfisher/pull/664)
+
+---
+
+## [3.7.0 - Summer Bird](https://github.com/onevcat/Kingfisher/releases/tag/3.7.0) (2017-05-04)
+
+#### Add
+* A delegate method in `ImageDownloaderDelegate` to notify starting of a downloading progress.
+
+#### Fix
+* Better documentation for `Resource` parameter in image setting extension.
+
+---
+
+## [3.6.2 - Naughty CGImage](https://github.com/onevcat/Kingfisher/releases/tag/3.6.2) (2017-04-11)
+
+#### Fix
+* A problem in `CroppingImageProcessor` and `crop` method of images which crops wrong area for images with a non-`1` scale. [#649](https://github.com/onevcat/Kingfisher/pull/649)
+* Refactor for `ResizingImageProcessor`. `targetSize` of `ResizingImageProcessor` is now deprecated. Use `referenceSize` instead. It's just a name changing for clearer API. [#646](https://github.com/onevcat/Kingfisher/pull/646)
+
+---
+
 ## [3.6.1 - Some Optimization](https://github.com/onevcat/Kingfisher/releases/tag/3.6.1) (2017-04-01)
 
 #### Fix

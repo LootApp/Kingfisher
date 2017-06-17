@@ -14,7 +14,7 @@
     <a title="ResizingImageProcessor Struct Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Kingfisher Docs</a> (79% documented)</p>
+        <p><a href="../index.html">Kingfisher Docs</a> (78% documented)</p>
         <p class="header-right"><a href="https://github.com/onevcat/Kingfisher"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://http%3A%2F%2Fonevcat%2Egithub%2Eio%2FKingfisher%2Fdocsets%2FKingfisher%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -207,10 +207,16 @@
                 <a href="../Structs/Filter.html">Filter</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/FormatIndicatedCacheSerializer.html">FormatIndicatedCacheSerializer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/ImageResource.html">ImageResource</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/OverlayImageProcessor.html">OverlayImageProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RectCorner.html">RectCorner</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/ResizingImageProcessor.html">ResizingImageProcessor</a>
@@ -286,8 +292,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Identifier of the processor.
-- Note: See documentation of <code><a href="../Protocols/ImageProcessor.html">ImageProcessor</a></code> protocol for more.</p>
+                        <p>Identifier of the processor.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    See documentation of <code><a href="../Protocols/ImageProcessor.html">ImageProcessor</a></code> protocol for more.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -299,7 +309,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/onevcat/Kingfisher/tree/3.6.1/Sources/ImageProcessor.swift#L202">Show on GitHub</a>
+                        <a href="https://github.com/onevcat/Kingfisher/tree/3.10.2/Sources/ImageProcessor.swift#L235">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -307,9 +317,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vV10Kingfisher22ResizingImageProcessor10targetSizeVSC6CGSize"></a>
-                    <a name="//apple_ref/swift/Property/targetSize" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vV10Kingfisher22ResizingImageProcessor10targetSizeVSC6CGSize">targetSize</a>
+                    <a name="/s:vV10Kingfisher22ResizingImageProcessor13referenceSizeVSC6CGSize"></a>
+                    <a name="//apple_ref/swift/Property/referenceSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV10Kingfisher22ResizingImageProcessor13referenceSizeVSC6CGSize">referenceSize</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -317,19 +327,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Target size of output image should be.</p>
+                        <p>The reference size for resizing operation.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targetSize</span><span class="p">:</span> <span class="kt">CGSize</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">referenceSize</span><span class="p">:</span> <span class="kt">CGSize</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/onevcat/Kingfisher/tree/3.6.1/Sources/ImageProcessor.swift#L205">Show on GitHub</a>
+                        <a href="https://github.com/onevcat/Kingfisher/tree/3.10.2/Sources/ImageProcessor.swift#L238">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -360,7 +370,188 @@ Default to ContentMode.none</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/onevcat/Kingfisher/tree/3.6.1/Sources/ImageProcessor.swift#L209">Show on GitHub</a>
+                        <a href="https://github.com/onevcat/Kingfisher/tree/3.10.2/Sources/ImageProcessor.swift#L242">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FV10Kingfisher22ResizingImageProcessorcFT13referenceSizeVSC6CGSize4modeOS_11ContentMode_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(referenceSize:mode:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV10Kingfisher22ResizingImageProcessorcFT13referenceSizeVSC6CGSize4modeOS_11ContentMode_S0_">init(referenceSize:mode:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize a <code>ResizingImageProcessor</code>.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The instance of <code>ResizingImageProcessor</code> will follow its <code>mode</code> property
+and try to resizing the input images to fit or fill the <code><a href="../Structs/ResizingImageProcessor.html#/s:vV10Kingfisher22ResizingImageProcessor13referenceSizeVSC6CGSize">referenceSize</a></code>.
+That means if you are using a <code>mode</code> besides of <code>.none</code>, you may get an
+image with its size not be the same as the <code><a href="../Structs/ResizingImageProcessor.html#/s:vV10Kingfisher22ResizingImageProcessor13referenceSizeVSC6CGSize">referenceSize</a></code>.</p>
+
+</div>
+
+<p><strong>Example</strong>: With input image size: {100, 200}, 
+  <code><a href="../Structs/ResizingImageProcessor.html#/s:vV10Kingfisher22ResizingImageProcessor13referenceSizeVSC6CGSize">referenceSize</a></code>: {100, 100}, <code>mode</code>: <code>.aspectFit</code>,
+  you will get an output image with size of {50, 100}, which <q>fit</q>s
+  the <code><a href="../Structs/ResizingImageProcessor.html#/s:vV10Kingfisher22ResizingImageProcessor13referenceSizeVSC6CGSize">referenceSize</a></code>.</p>
+
+<p>If you need an output image exactly to be a specified size, append or use
+  a <code><a href="../Structs/CroppingImageProcessor.html">CroppingImageProcessor</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">referenceSize</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="kt"><a href="../Enums/ContentMode.html">ContentMode</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">none</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>referenceSize</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The reference size for resizing operation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Target content mode of output image should be.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/onevcat/Kingfisher/tree/3.10.2/Sources/ImageProcessor.swift#L263-L272">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FV10Kingfisher22ResizingImageProcessor7processFT4itemOS_16ImageProcessItem7optionsGSaOS_25KingfisherOptionsInfoItem__GSqCSo7UIImage_"></a>
+                    <a name="//apple_ref/swift/Method/process(item:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV10Kingfisher22ResizingImageProcessor7processFT4itemOS_16ImageProcessItem7optionsGSaOS_25KingfisherOptionsInfoItem__GSqCSo7UIImage_">process(item:options:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Process an input <code><a href="../Enums/ImageProcessItem.html">ImageProcessItem</a></code> item to an image for this processor.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>See documentation of <code><a href="../Protocols/ImageProcessor.html">ImageProcessor</a></code> protocol for more.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">process</span><span class="p">(</span><span class="nv">item</span><span class="p">:</span> <span class="kt"><a href="../Enums/ImageProcessItem.html">ImageProcessItem</a></span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10Kingfisher21KingfisherOptionsInfo">KingfisherOptionsInfo</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Image</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>item</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Input item which will be processed by <code>self</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Options when processing the item.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The processed image.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/onevcat/Kingfisher/tree/3.10.2/Sources/ImageProcessor.swift#L282-L289">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vV10Kingfisher22ResizingImageProcessor10targetSizeVSC6CGSize"></a>
+                    <a name="//apple_ref/swift/Property/targetSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV10Kingfisher22ResizingImageProcessor10targetSizeVSC6CGSize">targetSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reference size of output image should follow.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">targetSize</span><span class="p">:</span> <span class="kt">CGSize</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/onevcat/Kingfisher/tree/3.10.2/Sources/ImageProcessor.swift#L580-L582">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -401,8 +592,7 @@ Default to ContentMode.none</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Target size of output image should be.</p>
-
+                                  <p>Reference size of output image should follow.</p>
                                 </div>
                               </td>
                             </tr>
@@ -415,7 +605,6 @@ Default to ContentMode.none</p>
                               <td>
                                 <div>
                                   <p>Target content mode of output image should be.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -423,81 +612,7 @@ Default to ContentMode.none</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/onevcat/Kingfisher/tree/3.6.1/Sources/ImageProcessor.swift#L215-L224">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FV10Kingfisher22ResizingImageProcessor7processFT4itemOS_16ImageProcessItem7optionsGSaOS_25KingfisherOptionsInfoItem__GSqCSo7UIImage_"></a>
-                    <a name="//apple_ref/swift/Method/process(item:options:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FV10Kingfisher22ResizingImageProcessor7processFT4itemOS_16ImageProcessItem7optionsGSaOS_25KingfisherOptionsInfoItem__GSqCSo7UIImage_">process(item:options:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Process an input <code><a href="../Enums/ImageProcessItem.html">ImageProcessItem</a></code> item to an image for this processor.</p>
-
-<div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p>See documentation of <code><a href="../Protocols/ImageProcessor.html">ImageProcessor</a></code> protocol for more.</p>
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">process</span><span class="p">(</span><span class="nv">item</span><span class="p">:</span> <span class="kt"><a href="../Enums/ImageProcessItem.html">ImageProcessItem</a></span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10Kingfisher21KingfisherOptionsInfo">KingfisherOptionsInfo</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Image</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>item</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input item which will be processed by <code>self</code></p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>options</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Options when processing the item.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The processed image.</p>
-
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/onevcat/Kingfisher/tree/3.6.1/Sources/ImageProcessor.swift#L234-L241">Show on GitHub</a>
+                        <a href="https://github.com/onevcat/Kingfisher/tree/3.10.2/Sources/ImageProcessor.swift#L591-L593">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -507,8 +622,8 @@ Default to ContentMode.none</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://onevcat.com" target="_blank" rel="external">Wei Wang</a>. All rights reserved. (Last updated: 2017-04-01)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.5</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2017 <a class="link" href="https://onevcat.com" target="_blank" rel="external">Wei Wang</a>. All rights reserved. (Last updated: 2017-06-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

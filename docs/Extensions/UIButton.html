@@ -14,7 +14,7 @@
     <a title="UIButton Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Kingfisher Docs</a> (79% documented)</p>
+        <p><a href="../index.html">Kingfisher Docs</a> (78% documented)</p>
         <p class="header-right"><a href="https://github.com/onevcat/Kingfisher"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://http%3A%2F%2Fonevcat%2Egithub%2Eio%2FKingfisher%2Fdocsets%2FKingfisher%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -207,10 +207,16 @@
                 <a href="../Structs/Filter.html">Filter</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/FormatIndicatedCacheSerializer.html">FormatIndicatedCacheSerializer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/ImageResource.html">ImageResource</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/OverlayImageProcessor.html">OverlayImageProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RectCorner.html">RectCorner</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/ResizingImageProcessor.html">ResizingImageProcessor</a>
@@ -282,7 +288,6 @@
                       <div class="abstract">
                         <p>Set an image to use for a specified state with a resource, a placeholder image, options, progress handler and 
  completion handler.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>Both the <code>progressBlock</code> and <code>completionHandler</code> will be invoked in main thread.
@@ -317,7 +322,6 @@ The <code>CallbackDispatchQueue</code> specified in <code>optionsInfo</code> wil
                               <td>
                                 <div>
                                   <p>Resource object contains information such as <code>cacheKey</code> and <code>downloadURL</code>.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -330,7 +334,6 @@ The <code>CallbackDispatchQueue</code> specified in <code>optionsInfo</code> wil
                               <td>
                                 <div>
                                   <p>The state that uses the specified image.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -343,7 +346,6 @@ The <code>CallbackDispatchQueue</code> specified in <code>optionsInfo</code> wil
                               <td>
                                 <div>
                                   <p>A placeholder image when retrieving the image at URL.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -356,7 +358,6 @@ The <code>CallbackDispatchQueue</code> specified in <code>optionsInfo</code> wil
                               <td>
                                 <div>
                                   <p>A dictionary could control some behaviors. See <code>KingfisherOptionsInfo</code> for more.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -369,7 +370,6 @@ The <code>CallbackDispatchQueue</code> specified in <code>optionsInfo</code> wil
                               <td>
                                 <div>
                                   <p>Called when the image downloading progress gets updated.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -382,7 +382,6 @@ The <code>CallbackDispatchQueue</code> specified in <code>optionsInfo</code> wil
                               <td>
                                 <div>
                                   <p>Called when the image retrieved and set.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -392,10 +391,9 @@ The <code>CallbackDispatchQueue</code> specified in <code>optionsInfo</code> wil
                       <div>
                         <h4>Return Value</h4>
                         <p>A task represents the retrieving process.</p>
-
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/onevcat/Kingfisher/tree/3.6.1/Sources/UIButton+Kingfisher.swift#L294-L303">Show on GitHub</a>
+                        <a href="https://github.com/onevcat/Kingfisher/tree/3.10.2/Sources/UIButton+Kingfisher.swift#L301-L310">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -426,7 +424,7 @@ Nothing will happen if the downloading has already finished.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/onevcat/Kingfisher/tree/3.6.1/Sources/UIButton+Kingfisher.swift#L312">Show on GitHub</a>
+                        <a href="https://github.com/onevcat/Kingfisher/tree/3.10.2/Sources/UIButton+Kingfisher.swift#L319">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -446,7 +444,6 @@ Nothing will happen if the downloading has already finished.</p>
                       <div class="abstract">
                         <p>Set the background image to use for a specified state with a resource,
 a placeholder image, options progress handler and completion handler.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>Both the <code>progressBlock</code> and <code>completionHandler</code> will be invoked in main thread.
@@ -481,7 +478,6 @@ The <code>CallbackDispatchQueue</code> specified in <code>optionsInfo</code> wil
                               <td>
                                 <div>
                                   <p>Resource object contains information such as <code>cacheKey</code> and <code>downloadURL</code>.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -494,7 +490,6 @@ The <code>CallbackDispatchQueue</code> specified in <code>optionsInfo</code> wil
                               <td>
                                 <div>
                                   <p>The state that uses the specified image.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -507,7 +502,6 @@ The <code>CallbackDispatchQueue</code> specified in <code>optionsInfo</code> wil
                               <td>
                                 <div>
                                   <p>A placeholder image when retrieving the image at URL.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -520,7 +514,6 @@ The <code>CallbackDispatchQueue</code> specified in <code>optionsInfo</code> wil
                               <td>
                                 <div>
                                   <p>A dictionary could control some behaviors. See <code>KingfisherOptionsInfo</code> for more.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -533,7 +526,6 @@ The <code>CallbackDispatchQueue</code> specified in <code>optionsInfo</code> wil
                               <td>
                                 <div>
                                   <p>Called when the image downloading progress gets updated.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -546,7 +538,6 @@ The <code>CallbackDispatchQueue</code> specified in <code>optionsInfo</code> wil
                               <td>
                                 <div>
                                   <p>Called when the image retrieved and set.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -556,10 +547,9 @@ The <code>CallbackDispatchQueue</code> specified in <code>optionsInfo</code> wil
                       <div>
                         <h4>Return Value</h4>
                         <p>A task represents the retrieving process.</p>
-
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/onevcat/Kingfisher/tree/3.6.1/Sources/UIButton+Kingfisher.swift#L334-L343">Show on GitHub</a>
+                        <a href="https://github.com/onevcat/Kingfisher/tree/3.10.2/Sources/UIButton+Kingfisher.swift#L341-L350">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -590,7 +580,7 @@ Nothing will happen if the downloading has already finished.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/onevcat/Kingfisher/tree/3.6.1/Sources/UIButton+Kingfisher.swift#L352">Show on GitHub</a>
+                        <a href="https://github.com/onevcat/Kingfisher/tree/3.10.2/Sources/UIButton+Kingfisher.swift#L359">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -632,7 +622,6 @@ Nothing will happen if the downloading has already finished.</p>
                               <td>
                                 <div>
                                   <p>The state that uses the specified image.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -642,10 +631,9 @@ Nothing will happen if the downloading has already finished.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>Current URL for image.</p>
-
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/onevcat/Kingfisher/tree/3.6.1/Sources/UIButton+Kingfisher.swift#L364">Show on GitHub</a>
+                        <a href="https://github.com/onevcat/Kingfisher/tree/3.10.2/Sources/UIButton+Kingfisher.swift#L371">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -687,7 +675,6 @@ Nothing will happen if the downloading has already finished.</p>
                               <td>
                                 <div>
                                   <p>The state that uses the specified background image.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -697,10 +684,9 @@ Nothing will happen if the downloading has already finished.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>Current URL for background image.</p>
-
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/onevcat/Kingfisher/tree/3.6.1/Sources/UIButton+Kingfisher.swift#L391">Show on GitHub</a>
+                        <a href="https://github.com/onevcat/Kingfisher/tree/3.10.2/Sources/UIButton+Kingfisher.swift#L398">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -710,8 +696,8 @@ Nothing will happen if the downloading has already finished.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://onevcat.com" target="_blank" rel="external">Wei Wang</a>. All rights reserved. (Last updated: 2017-04-01)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.5</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2017 <a class="link" href="https://onevcat.com" target="_blank" rel="external">Wei Wang</a>. All rights reserved. (Last updated: 2017-06-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
