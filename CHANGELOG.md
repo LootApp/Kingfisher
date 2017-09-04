@@ -2,6 +2,51 @@
 
 -----
 
+## [3.12.2 - Scaling Background Decoding](https://github.com/onevcat/Kingfisher/releases/tag/3.12.2) (2017-09-02)
+
+#### Fix
+* Fix an issue which causes image scale not correct when background decoding option is used. [#761](https://github.com/onevcat/Kingfisher/issues/761)
+
+---
+
+## [3.12.1 - Placeholder](https://github.com/onevcat/Kingfisher/releases/tag/3.12.1) (2017-08-30)
+
+#### Add
+* Now you could use a customized view (subclass of `UIView` or `NSView`) as placeholder in image view setting extension method. [#746](https://github.com/onevcat/Kingfisher/issues/746)
+
+---
+
+## [3.12.0 - Placeholder](https://github.com/onevcat/Kingfisher/releases/tag/3.12.0) (2017-08-30)
+
+#### Add
+* Now you could use a customized view (subclass of `UIView` or `NSView`) as placeholder in image view setting extension method. [#746](https://github.com/onevcat/Kingfisher/issues/746)
+
+---
+
+## [3.11.0 - Task Auth](https://github.com/onevcat/Kingfisher/releases/tag/3.11.0) (2017-08-16)
+
+#### Add
+* A task based authentication challenge handler for some auth methods like HTTP Digest. [#742](https://github.com/onevcat/Kingfisher/issues/742)
+
+#### Fix
+* The option of `keepCurrentImageWhileLoading` now will respect your placeholder if the original image is `nil` in the image view. [#747](https://github.com/onevcat/Kingfisher/pull/747)
+
+---
+
+## [3.10.4 - Indicator Size](https://github.com/onevcat/Kingfisher/releases/tag/3.10.4) (2017-07-26)
+
+#### Fix
+* Respect image and custom indicator size. Now Kingfisher will not resize the indicators to the image size for you automatically.
+
+---
+
+## [3.10.3 - ProMotion](https://github.com/onevcat/Kingfisher/releases/tag/3.10.3) (2017-07-06)
+
+#### Fix
+* Fix a problem which causes the GIF playing in a slow rate on ProMotion enabled devices (iPad Pro 10.5) [#718](https://github.com/onevcat/Kingfisher/issues/718)
+
+---
+
 ## [3.10.2 - Missing Boys](https://github.com/onevcat/Kingfisher/releases/tag/3.10.2) (2017-06-16)
 
 #### Fix
