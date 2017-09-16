@@ -3,6 +3,10 @@ fastlane_version "1.37.0"
 
 default_platform :ios
 
+SLACK_URL = "https://hooks.slack.com/services/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".freeze
+FRAMEWORK_NAME = "Kingfisher".freeze
+REPOSITORY_NAME = "Kingfisher".freeze
+
 platform :ios do
   before_all do
 
@@ -74,6 +78,41 @@ platform :ios do
                         --module Kingfisher \
                         --root-url http://onevcat.github.io/Kingfisher/ \
                         --output docs/")
+  end
+
+
+  desc "Release new version"
+  lane :release_loot do |options|
+      target_version = options[:version]
+      raise "The version is missed. Use `fastlane release version:{version_number}`.`" if target_version.nil?
+
+      ensure_git_branch
+      ensure_git_status_clean
+      
+      # Increment version
+      increment_version_number(version_number: target_version)  
+      
+      # Create Carthage framework
+      Actions.sh("cd .. && carthage build --no-skip-current && carthage archive #{FRAMEWORK_NAME}")
+      framework_binary = File.join(File.expand_path('../..', __FILE__),"#{FRAMEWORK_NAME}.framework.zip")
+      raise "No binary found to upload #{framework_binary}" if File.file?(framework_binary) == false
+
+      unless (`git status --porcelain`).empty?
+          git_add
+          git_commit(path: ".", message: "New release version bump") 
+
+          # Create release tag
+          push_to_git_remote
+      end
+
+      set_github_release(
+          repository_name: "LootApp/#{REPOSITORY_NAME}",
+          api_token: ENV['GITHUB_API_TOKEN'],
+          tag_name: target_version,
+          upload_assets: [ framework_binary ],
+          name: "",
+          description: ""
+      )
   end
 
   after_all do |lane|

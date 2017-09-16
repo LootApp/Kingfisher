@@ -84,3 +84,9 @@ fastlane/README.md
 /Gemfile
 /Gemfile.lock
 /Kingfisher-TestImages
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+*.framework.zip
